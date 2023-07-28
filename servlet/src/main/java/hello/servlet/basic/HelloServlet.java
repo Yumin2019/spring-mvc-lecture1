@@ -11,13 +11,17 @@ import java.io.IOException;
 public class HelloServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("HelloServlet.service");
+        printStartLine(req, resp);
+    }
 
-        String username = req.getParameter("username");
-        System.out.println("username = " + username);
-
-        resp.setContentType("text/plain");
-        resp.setCharacterEncoding("utf-8");
-        resp.getWriter().write("hello " + username);
+    public static void printStartLine(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println("======== request line  start =========");
+        System.out.println("request.getMethod() = " + request.getMethod());
+        System.out.println("request.getProtocol() = " + request.getProtocol());
+        System.out.println("request.getScheme() = " + request.getScheme());
+        System.out.println("request.getRequestURL() = " + request.getRequestURL());
+        System.out.println("request.getQueryString() = " + request.getQueryString());
+        System.out.println("request.isSecure() = " + request.isSecure());
+        System.out.println("======== request line  end =========");
     }
 }
