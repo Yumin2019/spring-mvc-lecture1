@@ -1,7 +1,5 @@
 package hello.servlet.domain.member;
 
-import hello.servlet.Member;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

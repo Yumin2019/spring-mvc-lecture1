@@ -1,4 +1,4 @@
-package hello.servlet;
+package hello.servlet.domain.member;
 
 import lombok.Getter;
 import lombok.Setter;
